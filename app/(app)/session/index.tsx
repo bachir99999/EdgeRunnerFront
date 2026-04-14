@@ -8,12 +8,12 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { ExerciseSelection } from "../components/ExerciseSelection";
-import { SessionCard } from "../components/SessionCard";
-import { SessionCreation } from "../components/SessionCreation";
-import { SessionDetail } from "../components/SessionDetail";
-import { useWorkout } from "../context/WorkoutContext";
-import { useTheme } from "../hooks/useTheme";
+import { ExerciseSelection } from "../../components/ExerciseSelection";
+import { SessionCard } from "../../components/SessionCard";
+import { SessionCreation } from "../../components/SessionCreation";
+import { SessionDetail } from "../../components/SessionDetail";
+import { useWorkout } from "../../context/WorkoutContext";
+import { useTheme } from "../../hooks/useTheme";
 
 export default function Index() {
   const colors = useTheme();
@@ -152,21 +152,6 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>MES SESSIONS</Text>
-        <TouchableOpacity
-          style={styles.createButton}
-          onPress={() => setShowCreateSession(true)}
-        >
-          <MaterialCommunityIcons
-            name="plus"
-            size={18}
-            color={colors.background}
-          />
-          <Text style={styles.createButtonText}>Nouvelle</Text>
-        </TouchableOpacity>
-      </View>
-
       {sessions.length === 0 ? (
         <View style={styles.emptyState}>
           <Text style={styles.emptyTitle}>Aucune Session</Text>

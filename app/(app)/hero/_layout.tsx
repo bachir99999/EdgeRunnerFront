@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { useTheme } from "../hooks/useTheme";
+import { useTheme } from "../../hooks/useTheme";
 
 export default function Layout() {
   const colors = useTheme();
@@ -7,6 +7,7 @@ export default function Layout() {
   return (
     <Stack
       screenOptions={{
+        headerShown: false,
         headerStyle: {
           backgroundColor: colors.surface,
           // borderBottomColor: colors.borderGlow,

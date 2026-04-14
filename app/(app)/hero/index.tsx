@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { useTheme } from "../hooks/useTheme";
+import { useTheme } from "../../hooks/useTheme";
 
 export default function Index() {
   const colors = useTheme();
